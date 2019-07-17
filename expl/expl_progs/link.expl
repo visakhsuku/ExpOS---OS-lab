@@ -1,0 +1,38 @@
+type
+linkedlist
+{
+	int data;
+	linkedlist next;
+}
+endtype
+int main()
+{
+decl
+	int n,temp,i;
+	linkedlist head,tail;
+enddecl
+begin
+	temp=initialize();
+	head=alloc();
+	tail=head;
+	read(n);
+	i=0;
+	while(i<n) do
+		read(temp);
+		tail.data=temp;
+		tail.next=alloc();
+		tail=tail.next;
+		i=i+1;
+	endwhile;
+	tail=head;
+	i=0;
+	while(i<n) do
+		write(tail.data);
+		tail=tail.next;
+		i=i+1;
+	endwhile;
+	return 0;
+end
+}
+
+		
